@@ -15,6 +15,21 @@ Acrescente no seu /etc/hosts (para Windows o caminho é C:\Windows\system32\driv
 ```
 Em todos os sistemas operacionais é necessário abrir o programa para editar o *hosts* como Administrator da máquina ou root.
 
+## Pacote do Kafka
+
+O pacote Kafka é baseado em "C" e para que possamos utilizar o Kafka com Golang, é necessário configurar o golang para que ele consiga compilar o pacote do Kafka. Para isso, precisamos garantir que a variável de ambiente **CGO_ENABLED** esteja habilitada. Para isso, execute o comando abaixo:
+
+```bash
+go env -w CGO_ENABLED='1'
+```
+
+Se estiver usando linux, recomendo instalar o `build-essential` para que o pacote do Kafka seja compilado corretamente.
+
+```bash
+sudo apt install build-essential
+```
+
+
 ## Rodar a aplicação
 
 
