@@ -2,6 +2,7 @@ package kafka
 
 import (
 	"encoding/json"
+	"fmt"
 	"log"
 	"os"
 	"time"
@@ -14,7 +15,11 @@ import (
 func Produce(msg *ckafka.Message) {
 	producer := kafka.NewKafkaProducer()
 	route := route.NewRoute()
-	json.Unmarshal(msg.Value, &route)
+	err := json.Unmarshal(msg.Value, &route)
+	if err != nil {
+		fmt.Println(err.Error())
+		return
+	}
 	route.LoadPositions()
 	positions, err := route.ExportJsonPositions()
 	if err != nil {
