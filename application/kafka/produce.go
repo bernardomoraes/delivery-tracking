@@ -8,7 +8,7 @@ import (
 
 	"github.com/bernardomoraes/delivery-tracking/application/route"
 	"github.com/bernardomoraes/delivery-tracking/infra/kafka"
-	ckafka "github.com/confluentinc/confluent-kafka-go/kafka"
+	ckafka "github.com/confluentinc/confluent-kafka-go/v2/kafka"
 )
 
 func Produce(msg *ckafka.Message) {
