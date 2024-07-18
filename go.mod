@@ -1,8 +1,8 @@
 module github.com/bernardomoraes/delivery-tracking
 
-go 1.16
+go 1.21
 
 require (
-	github.com/confluentinc/confluent-kafka-go v1.9.2
+	github.com/confluentinc/confluent-kafka-go/v2 v2.5.0
 	github.com/joho/godotenv v1.4.0
 )

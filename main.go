@@ -6,7 +6,7 @@ import (
 
 	kafkaApp "github.com/bernardomoraes/delivery-tracking/application/kafka"
 	"github.com/bernardomoraes/delivery-tracking/infra/kafka"
-	ckafka "github.com/confluentinc/confluent-kafka-go/kafka"
+	ckafka "github.com/confluentinc/confluent-kafka-go/v2/kafka"
 	"github.com/joho/godotenv"
 )
 

@@ -1,10 +1,11 @@
 package kafka
 
 import (
+	"fmt"
 	"log"
 	"os"
 
-	ckafka "github.com/confluentinc/confluent-kafka-go/kafka"
+	ckafka "github.com/confluentinc/confluent-kafka-go/v2/kafka"
 )
 
 type KafkaConsumer struct {
@@ -36,6 +37,7 @@ func (k *KafkaConsumer) Consume() {
 	for {
 		msg, err := c.ReadMessage(-1) // -1 = infinite await
 		if err == nil {
+			fmt.Println("Message on Kafka: ", string(msg.Value))
 			k.MsgChan <- msg
 		}
 	}
