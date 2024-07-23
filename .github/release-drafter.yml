@@ -5,7 +5,7 @@ categories:
       - "enhancement"
   - title: "Correções"
     label: "fix"
-change-template: "- #$NUMBER $TITLE (@$AUTHOR)"
+change-template: "- #$NUMBER - $TITLE (@$AUTHOR)"
 version-resolver:
   minor:
     labels:
@@ -15,11 +15,10 @@ version-resolver:
     labels:
       - "fix"
 template: |
-  ## Changelog da versão: $RESOLVED_VERSION
+  ## Changelog
 
   $CHANGES
 
   Commits: https://github.com/bernardomoraes/delivery-tracking/compare/$PREVIOUS_TAG...v$RESOLVED_VERSION
-  Tag: https://github.com/bernardomoraes/delivery-tracking/releases/tag/v$RESOLVED_VERSION
 name-template: "v$RESOLVED_VERSION"
 tag-template: "v$RESOLVED_VERSION"
