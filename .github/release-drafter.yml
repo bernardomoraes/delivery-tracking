@@ -1,5 +1,5 @@
 categories:
-  - title: "Novas Features"
+  - title: "Features"
     labels:
       - "feature"
       - "enhancement"
@@ -19,7 +19,7 @@ template: |
 
   $CHANGES
 
-  Commits: https://github.com/mundipagg/trex/compare/$PREVIOUS_TAG...v$RESOLVED_VERSION
-  Tag: https://github.com/mundipagg/trex/releases/tag/v$RESOLVED_VERSION
+  Commits: https://github.com/bernardomoraes/delivery-tracking/compare/$PREVIOUS_TAG...v$RESOLVED_VERSION
+  Tag: https://github.com/bernardomoraes/delivery-tracking/releases/tag/v$RESOLVED_VERSION
 name-template: "v$RESOLVED_VERSION"
 tag-template: "v$RESOLVED_VERSION"
