@@ -1,0 +1,25 @@
+categories:
+  - title: "Novas Features"
+    labels:
+      - "feature"
+      - "enhancement"
+  - title: "Correções"
+    label: "fix"
+change-template: "- #$NUMBER $TITLE (@$AUTHOR)"
+version-resolver:
+  minor:
+    labels:
+      - "feature"
+      - "enhancement"
+  patch:
+    labels:
+      - "fix"
+template: |
+  ## Changelog da versão: $RESOLVED_VERSION
+
+  $CHANGES
+
+  Commits: https://github.com/mundipagg/trex/compare/$PREVIOUS_TAG...v$RESOLVED_VERSION
+  Tag: https://github.com/mundipagg/trex/releases/tag/v$RESOLVED_VERSION
+name-template: "v$RESOLVED_VERSION"
+tag-template: "v$RESOLVED_VERSION"
